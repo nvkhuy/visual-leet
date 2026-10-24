@@ -1,0 +1,38 @@
+{
+  "name": "visual-leet",
+  "version": "1.0.0",
+  "description": "Agentic workflow and Remotion motion-graphics engine that transforms any LeetCode problem into optimal tested solutions and 4:5 vertical explainer videos.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "remotion preview src/index.ts",
+    "preview": "remotion preview src/index.ts",
+    "render": "remotion render src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "leetcode",
+    "remotion",
+    "algorithm-visualization",
+    "data-structures",
+    "motion-graphics",
+    "agentic-coding",
+    "bytebytego"
+  ],
+  "author": "nvkhuy",
+  "license": "MIT",
+  "dependencies": {
+    "@remotion/cli": "^4.0.538",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Remotion cache, build & rendered outputs
+.remotion/
+dist/
+build/
+out/
+*.mp4
+*.mov
+*.webm
+*.gif
+
+# Generated per-problem solutions, scenes & caption data
+src/problems/
+
+# Generated problem voiceover tracks & transcripts (keep reusable sfx_*.mp3)
+public/audio/*
+!public/audio/sfx_*.mp3
+
+# Generated helper scripts & temp directories
+scripts/
+tmp/
+temp/
+
+# Python, Whisper & Test caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.cache/
+.vitest/
+coverage/
+*.srt
+*.vtt
+
+# OS & Editor files
+.DS_Store
+.idea/
+.vscode/
+*.log
