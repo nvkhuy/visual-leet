@@ -39,3 +39,4 @@ coverage/
 .idea/
 .vscode/
 *.log
+.batch-studio-state.json

@@ -4,6 +4,7 @@
   "description": "Agentic workflow and Remotion motion-graphics engine that transforms any LeetCode problem into optimal tested solutions and 4:5 vertical explainer videos.",
   "main": "src/index.ts",
   "scripts": {
+    "studio": "tsx src/studio/server.ts",
     "start": "remotion preview src/index.ts",
     "preview": "remotion preview src/index.ts",
     "render": "remotion render src/index.ts",

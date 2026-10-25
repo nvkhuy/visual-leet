@@ -34,6 +34,17 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
           extrapolateRight: "clamp",
         });
 
+  const totalChars = (mainTitle?.length || 0) + (subTitle?.length || 0);
+  const mainFontSize =
+    totalChars <= 18
+      ? 52
+      : totalChars <= 24
+      ? 45
+      : totalChars <= 30
+      ? 39
+      : 34;
+  const subFontSize = mainFontSize + 2;
+
   return (
     <div
       style={{
@@ -41,7 +52,9 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
         flexDirection: "column",
         alignItems: "center",
         width: "100%",
-        padding: "26px 40px 8px",
+        maxWidth: "1020px",
+        padding: "22px 24px 6px",
+        boxSizing: "border-box",
         transform: `translateY(${interpolate(whip, [0, 1], [-40, 0])}px) scale(${whip})`,
         zIndex: 10,
       }}
@@ -51,8 +64,10 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
         style={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           gap: "12px",
           marginBottom: "8px",
+          maxWidth: "990px",
         }}
       >
         <div
@@ -67,6 +82,7 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
             display: "flex",
             alignItems: "center",
             gap: "6px",
+            whiteSpace: "nowrap",
           }}
         >
           <span style={{ color: "#38bdf8" }}>▲</span>
@@ -83,6 +99,10 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
             fontSize: "13px",
             fontWeight: 800,
             letterSpacing: "0.05em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            maxWidth: "520px",
           }}
         >
           {category}
@@ -94,13 +114,16 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
         style={{
           display: "flex",
           alignItems: "baseline",
+          justifyContent: "center",
           gap: "14px",
           position: "relative",
+          maxWidth: "990px",
+          whiteSpace: "nowrap",
         }}
       >
         <h1
           style={{
-            fontSize: "52px",
+            fontSize: `${mainFontSize}px`,
             fontWeight: 900,
             fontFamily:
               '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -108,6 +131,7 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
             margin: 0,
             letterSpacing: "-0.04em",
             textTransform: "uppercase",
+            whiteSpace: "nowrap",
           }}
         >
           {mainTitle}
@@ -115,7 +139,7 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
 
         <span
           style={{
-            fontSize: "54px",
+            fontSize: `${subFontSize}px`,
             fontWeight: 400,
             fontStyle: "italic",
             fontFamily: '"Playfair Display", Georgia, "Times New Roman", serif',
@@ -123,6 +147,7 @@ export const TypographyHeader: React.FC<HeaderProps> = ({
             margin: 0,
             letterSpacing: "-0.01em",
             position: "relative",
+            whiteSpace: "nowrap",
           }}
         >
           {subTitle}

@@ -10,7 +10,7 @@ Turn any LeetCode problem into a tested optimal solution and a short-form explai
 
 When you pass a LeetCode link to your coding agent, it runs a 4-step pipeline:
 
-1. **Solve & Test** — Writes the optimal solution in TypeScript (`solution.ts`) and Python (`solution.py`), then verifies it against edge cases and stress tests using **Vitest**.
+1. **Solve & Test (Python)** — Writes the optimal solution in Python (`solution.py`), then verifies it against edge cases and stress tests using `unittest` and **Vitest**.
 2. **Voiceover & Word Alignment** — Generates a Vietnamese narration script, synthesizes audio via `edge-tts`, speeds it up with `ffmpeg`, and extracts exact word-level timestamps using **Whisper**.
 3. **Visual Simulation** — Builds a 5-scene Remotion composition (`Intro` → `Intuition` → `Rules` → `Step-by-Step Trace` → `Complexity Summary`) timed dynamically to the audio track.
 4. **Render** — Exports the final video to `out/<problem-slug>.mp4`.
